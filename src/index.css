@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply antialiased text-gray-800 bg-gray-50;
+    height: 100%;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-gray-900 mb-4;
+    line-height: 1.2;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-gray-900 mb-3;
+    line-height: 1.2;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-gray-900 mb-2;
+    line-height: 1.2;
+  }
+
+  h4 {
+    @apply text-lg font-semibold text-gray-900 mb-2;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-md shadow-card p-4 transition-all duration-200;
+  }
+
+  .card:hover {
+    @apply shadow-elevated;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-800 hover:bg-gray-200 focus:ring-gray-500;
+  }
+
+  .btn-danger {
+    @apply bg-danger-500 text-white hover:bg-danger-600 focus:ring-danger-500;
+  }
+
+  .btn-success {
+    @apply bg-success-500 text-white hover:bg-success-600 focus:ring-success-500;
+  }
+
+  .table-container {
+    @apply w-full overflow-hidden overflow-x-auto rounded-md shadow-sm;
+  }
+
+  .table {
+    @apply w-full bg-white border-collapse;
+  }
+
+  .table th {
+    @apply bg-gray-50 text-left py-3 px-4 font-semibold text-gray-700 border-b border-gray-200;
+  }
+
+  .table tr {
+    @apply hover:bg-gray-50 transition-colors;
+  }
+
+  .table td {
+    @apply py-3 px-4 border-b border-gray-200;
+  }
+
+  .table tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-success-100 text-success-700;
+  }
+
+  .badge-warning {
+    @apply bg-warning-100 text-warning-700;
+  }
+
+  .badge-danger {
+    @apply bg-danger-100 text-danger-700;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-in-out;
+  }
+}
